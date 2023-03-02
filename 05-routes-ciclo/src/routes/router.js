@@ -7,9 +7,14 @@ const routes = [{
             import ("@/modules/pokemon/pages/ListPage.vue")
     },
     {
-        path: '/id',
+        path: '/:id',
+        name: 'pokemon-id',
         component: () =>
-            import ("@/modules/pokemon/pages/PokemonPage.vue")
+            import ("@/modules/pokemon/pages/PokemonPage.vue"),
+        props: (route) => {
+            const id = Number(route.params.id);
+            return isNaN(id) ? { id: 1 } : { id }
+        }
     },
     {
         path: '/about',
