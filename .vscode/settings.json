@@ -1,0 +1,6 @@
+{
+    "editor.linkedEditing": true,
+    "bracketPairColorizer.showBracketsInGutter": false,
+    "bracketPairColorizer.showBracketsInRuler": false,
+    "editor.guides.bracketPairs": true
+}
